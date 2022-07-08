@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: 172.19.160.1
+  pool: 5
+
+development:
+  <<: *default
+  database: recipeweb_development
+  username: dba
+  password: master
+
+test:
+  <<: *default
+  database: recipeweb_test
+  username: dba
+  password: master
+
+production:
+  <<: *default
+  database: recipeweb
+  username: dba
+  password: master
